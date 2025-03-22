@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  electribe-converter:
+    build: .
+    container_name: electribe-converter
+    restart: unless-stopped
+    ports:
+      - "8080:5000"
+    networks:
+      - electribe-network
+
+networks:
+  electribe-network:
+    driver: bridge
