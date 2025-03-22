@@ -10,4 +10,4 @@ RUN apt-get update && \
 ENV FLASK_APP=e2wa.py
 ENV FLASK_ENV=production
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "e2wa:app", "--timeout", "90"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app", "--timeout", "90"]
